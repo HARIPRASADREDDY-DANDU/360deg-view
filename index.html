@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <img src="logo2.png" id="logo" width="60px">
+        <img src="1.png" id="images">
+        <input type="range" name="range" id="rangeBar" 
+        min="1" max="48" value="1" oninput="changeImage()">
+    </div>
+    <p>https://www.ford.com/cars/mustang/gallery/</p>
+
+    <script>
+        function changeImage() {
+            var sliderValue = document.getElementById('rangeBar').value;
+            var imagePath = sliderValue + '.png';
+            document.getElementById('images').src = imagePath;
+        }
+    </script>
+</body>
+</html>
